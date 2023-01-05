@@ -14,7 +14,7 @@ public class App {
 
         // The supertype of any type of list is List<?>. 
         // <?> is a wild card
-        List<?> myObjs2 = new ArrayList<Object>();
+        List<?> myObjs2 = new ArrayList<>();
         List<Integer> myNumbers2 = new ArrayList<Integer>();
         myObjs2 = myNumbers;
     }
