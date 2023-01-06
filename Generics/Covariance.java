@@ -19,8 +19,5 @@ public class Covariance {
 		 * possible to write anything to it.
 		 * The compiler does not know if there is type compatibility.
 		 */
-		
-
 	}
-
 }
