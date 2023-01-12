@@ -23,5 +23,4 @@ public class Example001 {
 			System.out.println(key + ", " + cookies.get(key));
 		}
 	}
-
 }
