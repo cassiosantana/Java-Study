@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Program {
@@ -12,16 +11,12 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		
 		/*
-		 * Lambda expression (anonymous function)
-		 * This expression only has one line of code it is possible to summarize this syntax even more.
-		 * 
+		 * The sort method takes a Comparator as a parameter. 
+		 * Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+		 * list.sort(comp);
+		 * Passing this lambda expression as a parameter the code is very simplified and not verbose
 		 */
-		
-		Comparator<Product> comp = (p1, p2) -> {
-				return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		};
-		
-		list.sort(comp);
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
 		for (Product p : list) {
 			System.out.println(p);
