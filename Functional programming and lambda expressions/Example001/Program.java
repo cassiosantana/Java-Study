@@ -12,15 +12,13 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		
 		/*
-		 * Ignoring the MyComparator Class and making a comparator declaration in the 
-		 * main program using anonymous class syntax.
+		 * Lambda expression (anonymous function)
+		 * This expression only has one line of code it is possible to summarize this syntax even more.
+		 * 
 		 */
-		Comparator<Product> comp = new Comparator<Product>() {
-			
-			@Override
-			public int compare(Product p1, Product p2) {
+		
+		Comparator<Product> comp = (p1, p2) -> {
 				return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-			}
 		};
 		
 		list.sort(comp);
