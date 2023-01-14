@@ -39,7 +39,7 @@ public class Example003 {
 		
 		/*
 		 * It is possible to pass a function as an argument 
-		 * to another function or even to return it in a function.
+		 * to a method or even to return it in a function.
 		 */
 		list.sort(Example003::compareProducts);
 		list.forEach(System.out::println);
