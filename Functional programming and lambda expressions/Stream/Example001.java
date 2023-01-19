@@ -15,7 +15,6 @@ public class Example001 {
 		 * Stream is a solution for processing data sequences
 		 * Sequential access (no indexes)
 		 * Single-use
-		 * 
 		 */
 
 		Stream<Integer> st1 = list.stream().map(x -> x * -1);
