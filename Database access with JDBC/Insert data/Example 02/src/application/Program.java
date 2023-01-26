@@ -29,6 +29,7 @@ public class Program {
 					int id = rs.getInt(1);
 					System.out.println("Done! Id: " + id);
 				}
+				DB.closeResultSet(rs);
 			} else {
 				System.out.println("No rows affected!");
 			}
