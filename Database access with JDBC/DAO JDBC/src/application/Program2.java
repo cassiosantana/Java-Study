@@ -36,6 +36,12 @@ public class Program2 {
 		departmentDao.deleteById(id);
 		System.out.println("Delete completed!");
 		
+		System.out.println("\n=== TEST 5: seller update ===");
+		dep = departmentDao.findById(12);
+		dep.setName("Pet");
+		departmentDao.update(dep);
+		System.out.println("Update Completed!");
+		
 		sc.close();
 	}
 
