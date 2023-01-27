@@ -8,13 +8,17 @@ public class Program2 {
 
 	public static void main(String[] args) {
 		
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		Department dep = null;
 		
 		System.out.println("=== TEST 1: department insert ===");
-		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
-		Department dep = new Department(null, "Home");
+		dep = new Department(null, "Home");
 		departmentDao.insert(dep);
 		System.out.println(dep);
 
+		System.out.println("=== TEST 2: department findById ===");
+		dep = departmentDao.findById(4);
+		System.out.println(dep);
 	}
 
 }
