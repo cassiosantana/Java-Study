@@ -22,7 +22,7 @@ import com.cassiosantana.workshopmongo.dto.UserDTO;
 import com.cassiosantana.workshopmongo.services.UserServices;
 
 @RestController
-@RequestMapping(value ="/users" )
+@RequestMapping(value = "/users")
 public class UserResources {
 	
 	@Autowired
@@ -35,7 +35,7 @@ public class UserResources {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
-	@GetMapping(value ="/{id}" )
+	@GetMapping(value = "/{id}")
 	public ResponseEntity<UserDTO> findById(@PathVariable String id) {
 		User obj = service.findById(id);
 		return ResponseEntity.ok().body(new UserDTO(obj));
@@ -49,13 +49,13 @@ public class UserResources {
 		return ResponseEntity.created(uri).build();
 	}
 	
-	@DeleteMapping(value ="/{id}")
+	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Void> delete(@PathVariable String id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
 	
-	@PutMapping(value ="/{id}" )
+	@PutMapping(value = "/{id}")
 	public ResponseEntity<Void> update(@RequestBody UserDTO objDto, @PathVariable String id){
 		User obj = service.fromDTO(objDto);
 		obj.setId(id);
