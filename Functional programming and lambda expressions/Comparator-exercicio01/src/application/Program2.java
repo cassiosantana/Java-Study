@@ -1,13 +1,13 @@
 package application;
 
 import entities.Product;
-import util.MyComparator;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-public class Program {
+public class Program2 {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
@@ -17,7 +17,14 @@ public class Program {
         list.add(new Product("Laptop", 5000.0));
         list.add(new Product("Keyboard", 350.0));
 
-        list.sort(new MyComparator());
+        Comparator<Product> myComparator  = new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+        };
+
+        list.sort(myComparator);
         list.forEach(System.out::println);
     }
 }
