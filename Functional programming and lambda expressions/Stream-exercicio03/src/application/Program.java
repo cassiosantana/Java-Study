@@ -41,6 +41,7 @@ public class Program {
             throw new RuntimeException(e);
         }
 
+        sc.close();
 
     }
 }
